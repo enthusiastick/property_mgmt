@@ -1,0 +1,7 @@
+<h1>Listings Index</h1>
+<%= link_to "New Listing", new_building_path %>
+<ol>
+<% @buildings.each do |building| %>
+<li><%= link_to building.address, building %></li>
+<% end %>
+</ol>
