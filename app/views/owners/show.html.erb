@@ -3,4 +3,10 @@
 <p><%= @owner.email %></p>
 <p><%= @owner.company_name %></p>
 <%= button_to "Delete", { action: "destroy", id: @owner.id }, method: :delete, data: { confirm: "Are you sure?" } %>
+<p>Properties:</p>
+<ul>
+<% @owner.buildingsowned.each do |building| %>
+<li><%= building.address %></li>
+<% end %>
+</ul>
 <%= link_to 'Index', owners_path %>

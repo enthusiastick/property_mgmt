@@ -7,4 +7,12 @@ class Owner < ActiveRecord::Base
     @name = self.first_name + ' ' + self.last_name
   end
 
+  def buildingsowned
+    if self.buildings.empty?
+      []
+    else
+      self.buildings
+    end
+  end
+
 end
