@@ -1,7 +1,7 @@
 class BuildingsController < ApplicationController
 
   def create
-    @building = Building.new(params.require(:building).permit(:address, :city, :state, :zip_code, :description))
+    @building = Building.new(params.require(:building).permit(:address, :city, :state, :zip_code, :description, :owner_id))
     if @building.save
       redirect_to @building, notice: 'Building successfully listed.'
     else
