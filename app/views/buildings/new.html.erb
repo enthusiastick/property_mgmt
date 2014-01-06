@@ -1,0 +1,10 @@
+<h1>New Listing</h1>
+
+<%= simple_form_for @building do |f| %>
+  <%= f.input :address, label: 'Street Address' %>
+  <%= f.input :city %>
+  <%= f.input :state, collection: @states %>
+  <%= f.input :zip_code, label: 'Postal Code' %>
+  <%= f.input :description %>
+  <%= f.button :submit, label: 'List Property' %>
+<% end %>
