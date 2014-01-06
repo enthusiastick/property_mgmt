@@ -1,4 +1,6 @@
 <h1><%= @owner.name %></h1>
 <p id="notice"><%= notice %></p>
+<p><%= @owner.email %></p>
+<p><%= @owner.company_name %></p>
 <%= button_to "Delete", { action: "destroy", id: @owner.id }, method: :delete, data: { confirm: "Are you sure?" } %>
 <%= link_to 'Index', owners_path %>

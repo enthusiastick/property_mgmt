@@ -1,3 +1,6 @@
 <h1><%= @building.address %></h1>
 <p id="notice"><%= notice %></p>
+<p><%= @building.city + ' ' + @building.state + ' ' + @building.zip_code %></p>
+<p>Description: <%= @building.description %></p>
+<p>Owned By: <%= @building.owner %></p>
 <%= link_to 'Index', buildings_path %>
