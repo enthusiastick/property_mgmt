@@ -25,6 +25,7 @@ feature "Associate records a building" do
       click_on "Create Building"
 
       expect(page).to have_content "successfully"
+      page.has_link?("buildings_path")
     end
   end
 
