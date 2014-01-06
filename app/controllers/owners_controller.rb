@@ -9,6 +9,10 @@ class OwnersController < ApplicationController
     end
   end
 
+  def index
+    @owners = Owner.all
+  end
+
   def new
     @owner = Owner.new
   end
