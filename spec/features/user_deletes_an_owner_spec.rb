@@ -20,7 +20,6 @@ feature "Associate records a building with an owner" do
     owner = FactoryGirl.create(:owner)
     building = FactoryGirl.create(:building, owner: owner)
     visit "/owners/" + owner.id.to_s
-    binding.pry
     click_on("Delete")
     visit "/buildings/" + building.id.to_s
 

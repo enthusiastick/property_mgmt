@@ -12,7 +12,7 @@ class OwnersController < ApplicationController
   def destroy
     @owner = Owner.find(params[:id])
     unless @owner.buildings.empty?
-      @owner.buildings each do |building|
+      @owner.buildings.each do |building|
         change = building
         change.owner_id = nil
         change.save
