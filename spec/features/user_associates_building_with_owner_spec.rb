@@ -2,18 +2,12 @@ require 'spec_helper'
 
 feature "Associate records a building with an owner" do
   # As a real estate associate
-  # I want to record a building
+  # I want to correlate an owner with buildings
   # So that I can refer back to pertinent information
   # Acceptance Criteria:
-  # * I must specify a street address, city, state, and postal code
-  # * Only US states can be specified
-  # * I can optionally specify a description of the building
-  # * If I enter all of the required information in the required format, the building is recorded.
-  # * If I do not specify all of the required information in the required formats, the building is not recorded and I am presented with errors
-  # * Upon successfully creating a building, I am redirected so that I can record another building.
+  # * When recording a building, I want to optionally associate the building with its rightful owner.
 
   it "lists a building successfully" do
-    building = FactoryGirl.create(:building)
     owner = FactoryGirl.create(:owner)
     visit "/buildings/new"
 
