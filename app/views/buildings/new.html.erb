@@ -1,6 +1,9 @@
 <h1>New Listing</h1>
 
 <%= simple_form_for @building do |f| %>
+  <% if @building.errors.any? %>
+    <p>Error(s) detected; listing not created.</p>
+  <% end %>
   <%= f.input :address, label: 'Street Address' %>
   <%= f.input :city %>
   <%= f.input :state, collection: @states %>
