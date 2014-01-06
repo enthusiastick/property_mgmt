@@ -2,6 +2,6 @@
 <p><%= link_to "New Owner", new_owner_path %> | <%= link_to "Listings Index", buildings_path %></p>
 <ol>
 <% @owners.each do |owner| %>
-<li><%= link_to owner.first_name + ' ' + owner.last_name, owner %></li>
+<li><%= link_to owner.name, owner %></li>
 <% end %>
 </ol>

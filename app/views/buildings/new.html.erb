@@ -8,6 +8,7 @@
   <%= f.input :city %>
   <%= f.input :state, collection: @states %>
   <%= f.input :zip_code, label: 'Postal Code' %>
+  <%= f.association :owner, label_method: :name %>
   <%= f.input :description %>
   <%= f.button :submit %>
 <% end %>
